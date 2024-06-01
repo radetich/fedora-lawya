@@ -1,4 +1,8 @@
-echo "Swapping free codecs for nonfree codecs..."
+#!/bin/sh
+
+# i added the shebang for u! thanks for checking
+
+echo "Swapping free codecs for nonfree codecs (enjoy ur internet)..."
 sudo dnf update -y
 sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf update -y
@@ -10,3 +14,4 @@ sudo widevine-installer
 echo "Transition complete! Rebooting"
 sudo shutdown -r 1
 exit
+
